@@ -1,0 +1,23 @@
+.informacoes{
+  background-color: $very-dark-desaturated-blue;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  font-size: 15px;
+
+  border-radius: 0 0 5px 5px;
+
+  .filtros{
+    display: flex;
+    :first-child{
+      color: $bright-blue;
+    }
+    :nth-child(2){
+      margin-left: 5px;
+      margin-right: 5px;  
+    }
+  }
+
+}

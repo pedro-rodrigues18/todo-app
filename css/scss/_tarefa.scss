@@ -1,0 +1,12 @@
+.tarefa{
+  background: $very-dark-desaturated-blue;
+  border-bottom: solid 1px $dark-grayish-blue;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  
+  .tarefa-texto{
+    margin-left: 15px;
+    border-radius: 0;
+  }
+}

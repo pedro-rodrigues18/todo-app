@@ -1,0 +1,14 @@
+.check-tarefa{
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  border: 1.75px solid $very-dark-grayish-blue;
+  border-radius: 50% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    width: 10px;
+    height: 10px;
+  }
+}

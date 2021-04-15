@@ -1,0 +1,12 @@
+.criar-tarefa{
+  width:100%;
+  background-color: $very-dark-desaturated-blue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px $very-dark-blue;
+  .check-tarefa{
+    margin-left: 5px;
+  }
+}
