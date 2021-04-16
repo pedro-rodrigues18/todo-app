@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-/* line 6, ../../../Documents/todo-app-main/css/scss/_reset.scss */
+/* line 6, ../../../Documents/GitHub/todo-app/css/scss/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,48 +25,48 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 27, ../../../Documents/todo-app-main/css/scss/_reset.scss */
+/* line 27, ../../../Documents/GitHub/todo-app/css/scss/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 31, ../../../Documents/todo-app-main/css/scss/_reset.scss */
+/* line 31, ../../../Documents/GitHub/todo-app/css/scss/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 34, ../../../Documents/todo-app-main/css/scss/_reset.scss */
+/* line 34, ../../../Documents/GitHub/todo-app/css/scss/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 37, ../../../Documents/todo-app-main/css/scss/_reset.scss */
+/* line 37, ../../../Documents/GitHub/todo-app/css/scss/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 40, ../../../Documents/todo-app-main/css/scss/_reset.scss */
+/* line 40, ../../../Documents/GitHub/todo-app/css/scss/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 45, ../../../Documents/todo-app-main/css/scss/_reset.scss */
+/* line 45, ../../../Documents/GitHub/todo-app/css/scss/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 50, ../../../Documents/todo-app-main/css/scss/_reset.scss */
+/* line 50, ../../../Documents/GitHub/todo-app/css/scss/_reset.scss */
 textarea:focus, input:focus, select:focus {
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
 }
 
-/* line 1, ../../../Documents/todo-app-main/css/scss/_geral.scss */
+/* line 1, ../../../Documents/GitHub/todo-app/css/scss/_geral.scss */
 body {
   background: #161722;
   background-image: url(../../images/bg-desktop-dark.jpg);
@@ -80,7 +80,7 @@ body {
   align-items: center;
 }
 
-/* line 1, ../../../Documents/todo-app-main/css/scss/_todo.scss */
+/* line 1, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
 .todo {
   display: flex;
   flex-direction: column;
@@ -91,7 +91,7 @@ body {
   margin: 50px;
 }
 
-/* line 1, ../../../Documents/todo-app-main/css/scss/_titulo-todo.scss */
+/* line 1, ../../../Documents/GitHub/todo-app/css/scss/_titulo-todo.scss */
 .titulo-todo {
   display: flex;
   justify-content: space-between;
@@ -101,13 +101,13 @@ body {
   width: 100%;
 }
 
-/* line 2, ../../../Documents/todo-app-main/css/scss/_titulo-todo.scss */
+/* line 2, ../../../Documents/GitHub/todo-app/css/scss/_titulo-todo.scss */
 .titulo-todo .botao-tema {
   background: transparent;
   border: none;
 }
 
-/* line 1, ../../../Documents/todo-app-main/css/scss/_criar-tarefa.scss */
+/* line 1, ../../../Documents/GitHub/todo-app/css/scss/_criar-tarefa.scss */
 .criar-tarefa {
   width: 100%;
   background-color: #25273c;
@@ -118,38 +118,39 @@ body {
   box-shadow: 3px 3px 10px #161722;
 }
 
-/* line 9, ../../../Documents/todo-app-main/css/scss/_criar-tarefa.scss */
+/* line 9, ../../../Documents/GitHub/todo-app/css/scss/_criar-tarefa.scss */
 .criar-tarefa .check-tarefa {
-  margin-left: 5px;
+  margin-left: 20px;
 }
 
-/* line 1, ../../../Documents/todo-app-main/css/scss/_input-criar-tarefa.scss */
+/* line 1, ../../../Documents/GitHub/todo-app/css/scss/_input-criar-tarefa.scss */
 .input-criar-tarefa {
   width: calc(90% - 15px);
   background: transparent;
-  font-size: 18px;
-  padding: 15px 15px 15px 0px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  padding: 23px 20px 23px 15px;
   color: #777a92;
   border: none;
   border-radius: 5px;
 }
 
-/* line 1, ../../../Documents/todo-app-main/css/scss/_tarefa.scss */
+/* line 1, ../../../Documents/GitHub/todo-app/css/scss/_tarefa.scss */
 .tarefa {
   background: #25273c;
   border-bottom: solid 1px #777a92;
-  padding: 15px;
+  padding: 20px;
   display: flex;
   align-items: center;
 }
 
-/* line 8, ../../../Documents/todo-app-main/css/scss/_tarefa.scss */
+/* line 8, ../../../Documents/GitHub/todo-app/css/scss/_tarefa.scss */
 .tarefa .tarefa-texto {
   margin-left: 15px;
   border-radius: 0;
 }
 
-/* line 1, ../../../Documents/todo-app-main/css/scss/_lista-tarefas-todo.scss */
+/* line 1, ../../../Documents/GitHub/todo-app/css/scss/_lista-tarefas-todo.scss */
 .lista-tarefas-todo {
   width: 100%;
   height: 100%;
@@ -157,12 +158,12 @@ body {
   box-shadow: 3px 3px 10px #161722;
 }
 
-/* line 3, ../../../Documents/todo-app-main/css/scss/_lista-tarefas-todo.scss */
+/* line 3, ../../../Documents/GitHub/todo-app/css/scss/_lista-tarefas-todo.scss */
 .lista-tarefas-todo :first-child {
   border-radius: 5px 5px 0 0;
 }
 
-/* line 1, ../../../Documents/todo-app-main/css/scss/_check-tarefa.scss */
+/* line 1, ../../../Documents/GitHub/todo-app/css/scss/_check-tarefa.scss */
 .check-tarefa {
   background: transparent;
   width: 20px;
@@ -174,41 +175,50 @@ body {
   align-items: center;
 }
 
-/* line 10, ../../../Documents/todo-app-main/css/scss/_check-tarefa.scss */
+/* line 10, ../../../Documents/GitHub/todo-app/css/scss/_check-tarefa.scss */
 .check-tarefa img {
   width: 10px;
   height: 10px;
 }
 
-/* line 1, ../../../Documents/todo-app-main/css/scss/_informacoes.scss */
+/* line 1, ../../../Documents/GitHub/todo-app/css/scss/_informacoes.scss */
 .informacoes {
   background-color: #25273c;
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  color: #777a92;
   font-size: 15px;
   border-radius: 0 0 5px 5px;
 }
 
-/* line 12, ../../../Documents/todo-app-main/css/scss/_informacoes.scss */
+/* line 13, ../../../Documents/GitHub/todo-app/css/scss/_informacoes.scss */
 .informacoes .filtros {
   display: flex;
 }
 
-/* line 14, ../../../Documents/todo-app-main/css/scss/_informacoes.scss */
-.informacoes .filtros :first-child {
+/* line 16, ../../../Documents/GitHub/todo-app/css/scss/_informacoes.scss */
+.informacoes .filtros #botao-todos {
   color: #3a7bfd;
 }
 
-/* line 17, ../../../Documents/todo-app-main/css/scss/_informacoes.scss */
-.informacoes .filtros :nth-child(2) {
-  margin-left: 5px;
-  margin-right: 5px;
+/* line 21, ../../../Documents/GitHub/todo-app/css/scss/_informacoes.scss */
+.informacoes .botao {
+  background: transparent;
+  border: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  color: #777a92;
 }
 
-/* line 1, ../../../Documents/todo-app-main/css/scss/_footer.scss */
+/* line 1, ../../../Documents/GitHub/todo-app/css/scss/_footer.scss */
 .footer {
   margin-top: 30px;
+}
+
+/* line 3, ../../../Documents/GitHub/todo-app/css/scss/_footer.scss */
+.footer a:link {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

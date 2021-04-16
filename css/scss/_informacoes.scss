@@ -4,20 +4,26 @@
   justify-content: space-between;
 
   padding: 20px;
-
+  
+  color: $dark-grayish-blue;
   font-size: 15px;
 
   border-radius: 0 0 5px 5px;
 
   .filtros{
     display: flex;
-    :first-child{
+    
+    #botao-todos{
       color: $bright-blue;
     }
-    :nth-child(2){
-      margin-left: 5px;
-      margin-right: 5px;  
-    }
+  }
+
+  .botao{
+    background: transparent;
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    color: $dark-grayish-blue;
   }
 
 }
