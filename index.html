@@ -24,12 +24,12 @@
 
     <div class="criar-tarefa">
       <span class="check-tarefa"></span>
-      <input class="input-criar-tarefa" type="text" placeholder="Criar um novo todo...">
+      <input id="enter-tarefa" class="input-criar-tarefa" type="text" placeholder="Criar um novo todo...">
     </div>
 
     <div class="lista-tarefas-todo">
-      <ul>
-        <li class="tarefa">
+      <ul id="lista">
+        <!--<li class="tarefa">
           <span class="check-tarefa">
             <img src="/images/icon-check.svg" alt="check">
           </span>
@@ -37,10 +37,10 @@
         </li>
         <li class="tarefa">
           <span class="check-tarefa">
-            <!-- <img src="/images/icon-check.svg" alt="check"> -->
+            <img src="/images/icon-check.svg" alt="check">
           </span>
           <div class="tarefa-texto">teste 2</div>
-          <!--</li>
+        </li>
         <li class="tarefa">
           <span class="check-tarefa">
             <img src="/images/icon-check.svg" alt="check">
@@ -58,14 +58,14 @@
             <img src="/images/icon-check.svg" alt="check">
           </span>
           <div class="tarefa-texto">teste 5</div>
-        </li> -->
+        </li>-->
 
       </ul>
     </div>
 
     <div class="informacoes">
       <div class="contador">
-        <p>5 items restantes</p>
+        <p id="numero-de-tarefas">0 items restantes</p>
       </div>
       <div class="filtros">
         <button id="botao-todos" class="botao">
@@ -89,7 +89,7 @@
     Coded by <a href="https://github.com/pedro-rodrigues18">Pedro Rodrigues</a>.
   </footer>
 
-  <script src="/js/app.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 
 </html>
