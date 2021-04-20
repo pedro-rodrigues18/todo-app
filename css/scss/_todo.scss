@@ -1,3 +1,5 @@
+// TODO
+
 .todo {
   display: flex;
   flex-direction: column;
@@ -6,5 +8,122 @@
   height: 100%;
   width: 600px;
   margin: 50px;
-  //background-color: red;
+}
+
+// Título
+
+.titulo-todo{
+  .botao-tema{
+    background: transparent;
+    border: none;
+  }
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  width: 100%;
+}
+
+
+// Criar tarefa
+
+.criar-tarefa{
+  width:100%;
+  background-color: $very-dark-desaturated-blue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px $very-dark-blue;
+  .check-tarefa{
+    margin-left: 20px;
+  }
+}
+
+.input-criar-tarefa{
+  width: calc(90% - 15px);
+  background:transparent;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  padding: 23px 20px 23px 15px;
+  color: $dark-grayish-blue;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.tarefa{
+  background: $very-dark-desaturated-blue;
+  border-bottom: solid 1px $dark-grayish-blue;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  
+  .tarefa-texto{
+    margin-left: 15px;
+    border-radius: 0;
+  }
+}
+
+.link-tarefa{
+  display: flex;
+  width: 100%;
+}
+
+// Lista de Tarefas Criadas
+
+.lista-tarefas-todo{
+  
+  :first-child{
+    border-radius: 5px 5px 0 0;
+  }
+
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+
+  box-shadow: 3px 3px 10px $very-dark-blue;
+}
+
+// Informações e contador
+
+.informacoes{
+  background-color: $very-dark-desaturated-blue;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px;
+  
+  color: $dark-grayish-blue;
+  font-size: 15px;
+
+  border-radius: 0 0 5px 5px;
+
+  .filtros{
+    display: flex;
+    
+    #botao-todos{
+      color: $bright-blue;
+    }
+  }
+
+  .botao{
+    background: transparent;
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    color: $dark-grayish-blue;
+  }
+
+}
+
+
+//Footer
+
+.footer{
+  margin-top: 30px;
+  a:link{
+    text-decoration: none;
+  }
 }
