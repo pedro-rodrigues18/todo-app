@@ -135,7 +135,20 @@ body {
   border-radius: 5px;
 }
 
-/* line 56, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+/* line 58, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+.lista-tarefas-todo {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  box-shadow: 3px 3px 10px #161722;
+}
+
+/* line 60, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+.lista-tarefas-todo :first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+/* line 71, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
 .tarefa {
   background: #25273c;
   border-bottom: solid 1px #777a92;
@@ -144,32 +157,29 @@ body {
   align-items: center;
 }
 
-/* line 63, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+/* line 78, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
 .tarefa .tarefa-texto {
   margin-left: 15px;
   border-radius: 0;
+  color: #cacde8;
 }
 
-/* line 69, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+/* line 83, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+.tarefa .remover-tarefa {
+  height: 15px;
+  width: 15px;
+}
+
+/* line 89, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
 .link-tarefa {
   display: flex;
+  align-items: center;
   width: 100%;
+  text-decoration: none;
+  color: white;
 }
 
-/* line 76, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
-.lista-tarefas-todo {
-  width: 100%;
-  height: 100%;
-  margin-top: 20px;
-  box-shadow: 3px 3px 10px #161722;
-}
-
-/* line 78, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
-.lista-tarefas-todo :first-child {
-  border-radius: 5px 5px 0 0;
-}
-
-/* line 91, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+/* line 99, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
 .informacoes {
   background-color: #25273c;
   display: flex;
@@ -180,33 +190,38 @@ body {
   border-radius: 0 0 5px 5px;
 }
 
-/* line 103, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+/* line 111, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
 .informacoes .filtros {
   display: flex;
 }
 
-/* line 106, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
-.informacoes .filtros #botao-todos {
+/* line 113, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+.informacoes .filtros :nth-child(2) {
+  margin: 0 7px 0 7px;
+}
+
+/* line 118, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+.informacoes .link-filtros {
+  text-decoration: none;
+  color: #777a92;
+}
+
+/* line 121, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+.informacoes .link-filtros :hover {
   color: #3a7bfd;
 }
 
-/* line 111, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
-.informacoes .botao {
-  background: transparent;
-  border: none;
-  font-family: 'Josefin Sans', sans-serif;
+/* line 132, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+.footer {
+  margin-top: 30px;
   font-size: 15px;
   color: #777a92;
 }
 
-/* line 124, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
-.footer {
-  margin-top: 30px;
-}
-
-/* line 126, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
-.footer a:link {
+/* line 136, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+.footer a {
   text-decoration: none;
+  color: #3a7bfd;
 }
 
 /* line 1, ../../../Documents/GitHub/todo-app/css/scss/_check-tarefa.scss */
