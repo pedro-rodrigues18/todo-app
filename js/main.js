@@ -33,7 +33,7 @@ inserirTarefa.addEventListener('keyup', function (e) {
 
       listaDeTarefas.push(li);
 
-      atualizarLista(listaDeTarefas);
+      atualizarLista(listaDeTarefas, contador);
 
     } else {
       alert("Erro: não é possível criar tarefa vazia.");
@@ -47,10 +47,10 @@ function removerTarefa(id) {
 
 }
 
-function atualizarLista(listaDeTarefas) {
+function atualizarLista(listaDeTarefas, contador) {
 
-  console.log(listaDeTarefas.length);
-
+  document.getElementById('lista').innerHTML += listaDeTarefas[contador - 1];
+  document.getElementById('enter-tarefa').value = null;
 }
 
 function marcarTarefa(id) {
@@ -59,24 +59,11 @@ function marcarTarefa(id) {
   let linkTarefa = document.getElementById(id);
   let itensLinkTarefa = linkTarefa.children;
 
-  //mudando a cor de fundo do span check e adicionando svg check
-  itensLinkTarefa[0].style.background = 'linear-gradient(#57ddff, #c058f3)';
   itensLinkTarefa[0].innerHTML = `<img src="./images/icon-check.svg" alt="check">`;
-
-  // mudando cor do texto e adcionando linha horizontal sobre ele
-  itensLinkTarefa[1].style.color = '#777a92';
-  itensLinkTarefa[1].style.textDecoration = 'line-through';
-
-  contador--;
-  modificarContador(contador);
+  linkTarefa.classList.add('check-tarefa-concluida');
 
 }
 
 function modificarContador(contador) {
-
-  // numeroDeTarefas = `
-  //   <p id="numero-de-tarefas">${contador} items restantes</p>
-  // `;
-
-  // document.getElementById('numero-de-tarefas').innerHTML = numeroDeTarefas;
+  // implementar por último
 }
