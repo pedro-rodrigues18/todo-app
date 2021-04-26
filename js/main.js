@@ -1,11 +1,9 @@
-
 const inserirTarefa = document.getElementById('enter-tarefa');
 let listaFinal = document.getElementById('lista');
-let numeroDeTarefas = document.getElementById('numero-de-tarefas').innerHTML;
+let numeroDeTarefas = document.getElementById('numero-de-tarefas');
 
 let contador = 0;
-let li;
-let tarefa;
+let conteudo;
 let listaDeTarefas = [];
 
 inserirTarefa.addEventListener('keyup', function (e) {
@@ -13,19 +11,17 @@ inserirTarefa.addEventListener('keyup', function (e) {
   let key = e.which || e.keyCode;
 
   if (key == 13) {
-    tarefa = this.value;
+    conteudo = this.value;
 
-    if (tarefa != '') {
-
-      contador++;
+    if (conteudo != '') {
 
       li = `
-        <li class="tarefa" id="tarefa-${contador - 1}">
-          <a href="#" class="link-tarefa" id="check-${contador - 1}" onclick="marcarTarefa(id);">
+        <li class="tarefa" id="tarefa-${contador}">
+          <a href="#" class="link-tarefa" id="check-${contador}" onclick="marcarOuDesmarcarTarefa(id);">
             <span class="check-tarefa"></span>
-            <div class="tarefa-texto">${tarefa}</div>
+            <div class="tarefa-texto">${conteudo}</div>
           </a>
-          <a href="#" class="remover-tarefa" id="remover-${contador - 1}" onclick="removerTarefa(id);">
+          <a href="#" class="remover-tarefa" id="${contador}" onclick="removerTarefa(id);">
             <img src="./images/icon-cross.svg" alt="Remover Tarefa" class="remover-tarefa">
           </a>
         </li>
@@ -33,8 +29,10 @@ inserirTarefa.addEventListener('keyup', function (e) {
 
       listaDeTarefas.push(li);
 
-      atualizarLista(listaDeTarefas, contador);
+      document.getElementById('lista').innerHTML += li;
 
+      contador++;
+      
     } else {
       alert("Erro: não é possível criar tarefa vazia.");
     }
@@ -43,9 +41,10 @@ inserirTarefa.addEventListener('keyup', function (e) {
   }
 });
 
-function removerTarefa(id) {
 
-}
+// function removerTarefa(id) {
+
+// }
 
 function atualizarLista(listaDeTarefas, contador) {
 
@@ -53,7 +52,7 @@ function atualizarLista(listaDeTarefas, contador) {
   document.getElementById('enter-tarefa').value = null;
 }
 
-function marcarTarefa(id) {
+function marcarOuDesmarcarTarefa(id) {
   event.preventDefault();
 
   let linkTarefa = document.getElementById(id);
