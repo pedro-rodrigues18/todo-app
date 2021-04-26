@@ -1,6 +1,6 @@
 const inserirTarefa = document.getElementById('enter-tarefa');
-let listaFinal = document.getElementById('lista');
 let numeroDeTarefas = document.getElementById('numero-de-tarefas');
+const lista = document.getElementById('lista');
 
 let contador = 0;
 let conteudo;
@@ -15,23 +15,9 @@ inserirTarefa.addEventListener('keyup', function (e) {
 
     if (conteudo != '') {
 
-      li = `
-        <li class="tarefa" id="tarefa-${contador}">
-          <a href="#" class="link-tarefa" id="check-${contador}" onclick="marcarOuDesmarcarTarefa(id);">
-            <span class="check-tarefa"></span>
-            <div class="tarefa-texto">${conteudo}</div>
-          </a>
-          <a href="#" class="remover-tarefa" id="${contador}" onclick="removerTarefa(id);">
-            <img src="./images/icon-cross.svg" alt="Remover Tarefa" class="remover-tarefa">
-          </a>
-        </li>
-      `;
+      listaDeTarefas.push(conteudo);
 
-      listaDeTarefas.push(li);
-
-      document.getElementById('lista').innerHTML += li;
-
-      contador++;
+      renderizarLista(listaDeTarefas);
 
     } else {
       alert("Erro: não é possível criar tarefa vazia.");
@@ -41,15 +27,32 @@ inserirTarefa.addEventListener('keyup', function (e) {
   }
 });
 
+function removerTarefa(id) {
+  event.preventDefault();
 
-// function removerTarefa(id) {
+  tarefa = document.getElementById(id).parentNode;
 
-// }
+  listaDeTarefas.splice(id, 1);
 
-function atualizarLista(listaDeTarefas, contador) {
+  renderizarLista(listaDeTarefas);
 
-  document.getElementById('lista').innerHTML += listaDeTarefas[contador - 1];
-  document.getElementById('enter-tarefa').value = null;
+}
+
+function renderizarLista(listaDeTarefas) {
+  lista.innerHTML = '';
+  for (let i = 0; i < listaDeTarefas.length; i++) {
+    lista.innerHTML += `
+      <li class="tarefa">
+        <a href="#" class="link-tarefa" id="check-${i}" onclick="marcarOuDesmarcarTarefa(id);">
+          <span class="check-tarefa"></span>
+          <div class="tarefa-texto">${listaDeTarefas[i]}</div>
+        </a>
+        <a href="#" class="remover-tarefa" id="tarefa-${i}" onclick="removerTarefa(id);">
+          <img src="./images/icon-cross.svg" alt="Remover Tarefa" class="remover-tarefa">
+        </a>
+      </li>
+    `;
+  }
 }
 
 function marcarOuDesmarcarTarefa(id) {
