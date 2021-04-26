@@ -1,6 +1,6 @@
 const inserirTarefa = document.getElementById('enter-tarefa');
-let numeroDeTarefas = document.getElementById('numero-de-tarefas');
 const lista = document.getElementById('lista');
+const numeroDeTarefas = document.getElementById('numero-de-tarefas');
 
 let contador = 0;
 let conteudo;
@@ -19,6 +19,10 @@ inserirTarefa.addEventListener('keyup', function (e) {
 
       renderizarLista(listaDeTarefas);
 
+      contador++;
+
+      modificarContador(contador);
+
     } else {
       alert("Erro: não é possível criar tarefa vazia.");
     }
@@ -35,6 +39,12 @@ function removerTarefa(id) {
   listaDeTarefas.splice(id, 1);
 
   renderizarLista(listaDeTarefas);
+
+  //console.log(tarefa.children[0]);
+  if (!tarefa.children[0].classList.contains('check-tarefa-concluida')) {
+    contador--;
+    modificarContador(contador);
+  }
 
 }
 
@@ -65,12 +75,19 @@ function marcarOuDesmarcarTarefa(id) {
 
     linkTarefa.classList.add('check-tarefa-concluida');
     itensLinkTarefa[0].innerHTML = `<img src="./images/icon-check.svg" alt="check">`;
+
+    contador--;
+    modificarContador(contador);
+
   } else {
     linkTarefa.classList.remove('check-tarefa-concluida');
     itensLinkTarefa[0].innerHTML = '';
+
+    contador++;
+    modificarContador(contador);
   }
 }
 
 function modificarContador(contador) {
-  // implementar por último
+  numeroDeTarefas.innerHTML = `${contador} items restantes`;
 }
