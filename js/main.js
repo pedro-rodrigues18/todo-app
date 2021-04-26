@@ -32,7 +32,7 @@ inserirTarefa.addEventListener('keyup', function (e) {
       document.getElementById('lista').innerHTML += li;
 
       contador++;
-      
+
     } else {
       alert("Erro: não é possível criar tarefa vazia.");
     }
@@ -58,9 +58,14 @@ function marcarOuDesmarcarTarefa(id) {
   let linkTarefa = document.getElementById(id);
   let itensLinkTarefa = linkTarefa.children;
 
-  itensLinkTarefa[0].innerHTML = `<img src="./images/icon-check.svg" alt="check">`;
-  linkTarefa.classList.add('check-tarefa-concluida');
+  if (!linkTarefa.classList.contains('check-tarefa-concluida')) {
 
+    linkTarefa.classList.add('check-tarefa-concluida');
+    itensLinkTarefa[0].innerHTML = `<img src="./images/icon-check.svg" alt="check">`;
+  } else {
+    linkTarefa.classList.remove('check-tarefa-concluida');
+    itensLinkTarefa[0].innerHTML = '';
+  }
 }
 
 function modificarContador(contador) {
