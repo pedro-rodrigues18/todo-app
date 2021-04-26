@@ -47,7 +47,7 @@ function renderizarLista(listaDeTarefas) {
           <span class="check-tarefa"></span>
           <div class="tarefa-texto">${listaDeTarefas[i]}</div>
         </a>
-        <a href="#" class="remover-tarefa" id="tarefa-${i}" onclick="removerTarefa(id);">
+        <a href="#" class="remover-tarefa" id="${i}" onclick="removerTarefa(id);">
           <img src="./images/icon-cross.svg" alt="Remover Tarefa" class="remover-tarefa">
         </a>
       </li>
