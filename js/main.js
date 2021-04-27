@@ -118,6 +118,16 @@ function marcarOuDesmarcarTarefa(id) {
   }
 }
 
+function removerTodasTarefas() {
+
+  lista.innerHTML = '';
+  numeroDeTodos = listaDeTodo.length;
+  listaDeTodo.splice(0, numeroDeTodos);
+
+  contador = 0;
+  modificarContador(contador);
+}
+
 function modificarContador(contador) {
   numeroDeTarefas.innerHTML = `${contador} items restantes`;
 }
