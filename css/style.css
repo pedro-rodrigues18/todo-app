@@ -80,6 +80,13 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+  /* line 15, ../../../Documents/GitHub/todo-app/css/scss/_geral.scss */
+  body {
+    background-image: url(../../images/bg-mobile-dark.jpg);
+  }
+}
+
 /* line 3, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
 .todo {
   display: flex;
@@ -211,17 +218,68 @@ body {
   color: #3a7bfd;
 }
 
-/* line 132, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+/* line 131, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
 .footer {
   margin-top: 30px;
   font-size: 15px;
   color: #777a92;
 }
 
-/* line 136, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+/* line 135, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
 .footer a {
   text-decoration: none;
   color: #3a7bfd;
+}
+
+/* line 139, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+.footer :nth-child(2) {
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 147, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+  .todo {
+    width: 340px;
+    margin: 50px;
+  }
+  /* line 152, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+  .titulo-todo {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  /* line 156, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+  .input-criar-tarefa {
+    font-size: 18px;
+    padding: 15px 15px 15px 15px;
+  }
+  /* line 161, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+  .tarefa {
+    padding: 15px;
+  }
+  /* line 164, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+  .tarefa .tarefa-texto {
+    margin-left: 20px;
+  }
+  /* line 167, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+  .tarefa .remover-tarefa {
+    height: 15px;
+    width: 15px;
+  }
+  /* line 173, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+  .informacoes {
+    padding: 15px;
+  }
+  /* line 175, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+  .informacoes .filtros {
+    display: none;
+  }
+  /* line 180, ../../../Documents/GitHub/todo-app/css/scss/_todo.scss */
+  .footer {
+    width: 340px;
+    margin: 50px;
+    margin-top: 0px;
+    text-align: center;
+  }
 }
 
 /* line 1, ../../../Documents/GitHub/todo-app/css/scss/_check-tarefa.scss */

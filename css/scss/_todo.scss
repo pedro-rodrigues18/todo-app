@@ -126,7 +126,6 @@
 
 }
 
-
 //Footer
 
 .footer{
@@ -137,4 +136,52 @@
     text-decoration: none;
     color: $bright-blue;
   }
+  :nth-child(2){
+    margin-top: 5px;
+  }
+}
+
+// Layout Mobile
+
+@media screen and (max-width: 600px) {
+  .todo{
+    width: 340px;
+    margin: 50px;
+  }
+
+  .titulo-todo{
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  .input-criar-tarefa{
+    font-size: 18px;
+    padding: 15px 15px 15px 15px;
+  }
+
+  .tarefa{
+    padding: 15px;
+
+    .tarefa-texto{
+      margin-left: 20px;
+    }
+    .remover-tarefa{
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  .informacoes{
+    padding: 15px;
+    .filtros{
+      display: none;
+    }
+  }
+
+  .footer{
+    width: 340px;
+    margin: 50px;
+    margin-top: 0px;
+    text-align: center;
+  }
+  
 }
