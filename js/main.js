@@ -6,9 +6,13 @@ class Todo {
   tarefa;
   check = false;
 }
-let contador = 0;
+
 let conteudo;
-let listaDeTodo = [];
+let contador = JSON.parse(localStorage.getItem("contador")) || 0;
+let listaDeTodo = JSON.parse(localStorage.getItem("listaDeTodo")) || [];
+
+renderizarLista(listaDeTodo);
+modificarContador(contador);
 
 inserirTarefa.addEventListener('keyup', function (e) {
 
@@ -46,8 +50,8 @@ function removerTarefa(id) {
   listaDeTodo.splice(id, 1);
 
   renderizarLista(listaDeTodo);
+  salvarLocalStorage();
 
-  //console.log(tarefa.children[0]);
   if (!tarefa.children[0].classList.contains('check-tarefa-concluida')) {
     contador--;
     modificarContador(contador);
@@ -116,6 +120,8 @@ function marcarOuDesmarcarTarefa(id) {
     contador++;
     modificarContador(contador);
   }
+
+  salvarLocalStorage();
 }
 
 function removerTodasTarefas() {
@@ -130,4 +136,10 @@ function removerTodasTarefas() {
 
 function modificarContador(contador) {
   numeroDeTarefas.innerHTML = `${contador} items restantes`;
+  salvarLocalStorage();
+}
+
+function salvarLocalStorage() {
+  localStorage.setItem("listaDeTodo", JSON.stringify(listaDeTodo));
+  localStorage.setItem("contador", JSON.stringify(contador));
 }
