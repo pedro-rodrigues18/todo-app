@@ -45,17 +45,15 @@ inserirTarefa.addEventListener('keyup', function (e) {
 function removerTarefa(id) {
   event.preventDefault();
 
-  tarefa = document.getElementById(id).parentNode;
+  if (!listaDeTodo[id].check) {
+    contador--;
+    modificarContador(contador);
+  }
 
   listaDeTodo.splice(id, 1);
 
   renderizarLista(listaDeTodo);
   salvarLocalStorage();
-
-  if (!tarefa.children[0].classList.contains('check-tarefa-concluida')) {
-    contador--;
-    modificarContador(contador);
-  }
 
 }
 
@@ -65,11 +63,11 @@ function renderizarLista(listaDeTodo) {
     if (listaDeTodo[i].check == false) {
       lista.innerHTML += `
         <li class="tarefa">
-          <a href="#" class="link-tarefa" id="check-${i}" onclick="marcarOuDesmarcarTarefa(id);">
+          <a href="#" class="link-tarefa" onclick="marcarOuDesmarcarTarefa(${i});">
             <span class="check-tarefa"></span>
             <div class="tarefa-texto">${listaDeTodo[i].tarefa}</div>
           </a>
-          <a href="#" class="remover-tarefa" id="${i}" onclick="removerTarefa(id);">
+          <a href="#" class="remover-tarefa" onclick="removerTarefa(${i});">
             <img src="./images/icon-cross.svg" alt="Remover Tarefa" class="remover-tarefa">
           </a>
         </li>
@@ -78,11 +76,11 @@ function renderizarLista(listaDeTodo) {
     else {
       lista.innerHTML += `
         <li class="tarefa">
-          <a href="#" class="link-tarefa check-tarefa-concluida" id="check-${i}" onclick="marcarOuDesmarcarTarefa(id);">
+          <a href="#" class="link-tarefa check-tarefa-concluida" onclick="marcarOuDesmarcarTarefa(${i});">
             <span class="check-tarefa"><img src="./images/icon-check.svg" alt="check"></span>
             <div class="tarefa-texto">${listaDeTodo[i].tarefa}</div>
           </a>
-          <a href="#" class="remover-tarefa" id="${i}" onclick="removerTarefa(id);">
+          <a href="#" class="remover-tarefa" onclick="removerTarefa(${i});">
             <img src="./images/icon-cross.svg" alt="Remover Tarefa" class="remover-tarefa">
           </a>
         </li>
@@ -94,32 +92,17 @@ function renderizarLista(listaDeTodo) {
 function marcarOuDesmarcarTarefa(id) {
   event.preventDefault();
 
-  let linkTarefa = document.getElementById(id);
-  let itensLinkTarefa = linkTarefa.children;
-
-  idNumero = id.split("").filter(n => (Number(n) || n == 0)).join("");
-
-  console.log(idNumero);
-
-  if (!linkTarefa.classList.contains('check-tarefa-concluida')) {
-
-    listaDeTodo[idNumero].check = true;
-
-    linkTarefa.classList.add('check-tarefa-concluida');
-    itensLinkTarefa[0].innerHTML = `<img src="./images/icon-check.svg" alt="check">`;
-
+  if (!listaDeTodo[id].check) {
+    listaDeTodo[id].check = true;
     contador--;
-    modificarContador(contador);
-
-  } else {
-    listaDeTodo[idNumero].check = false;
-
-    linkTarefa.classList.remove('check-tarefa-concluida');
-    itensLinkTarefa[0].innerHTML = '';
-
-    contador++;
-    modificarContador(contador);
   }
+  else {
+    listaDeTodo[id].check = false;
+    contador++
+  }
+
+  renderizarLista(listaDeTodo);
+  modificarContador(contador);
 
   salvarLocalStorage();
 }
